@@ -1,7 +1,7 @@
 Python API for Hisense Televisions
 ##################################
 
-A fork built to support the [Homebridge-Hisense-TV plugin](https://github.com/MrAsterisco/homebridge-hisense-tv).
+A fork built to support the `Homebridge-Hisense-TV`_.
 
 CLI Usage
 *********
@@ -90,3 +90,4 @@ Security
    :target: https://hisensetv.readthedocs.io/en/latest/?badge=latest
 .. _mqtt-hisensetv: https://github.com/Krazy998/mqtt-hisensetv
 .. _455: https://github.com/eclipse/paho.mqtt.python/issues/455
+.. _Homebridge-Hisense-TV: https://github.com/MrAsterisco/homebridge-hisense-tv
