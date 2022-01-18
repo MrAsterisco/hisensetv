@@ -1,24 +1,7 @@
 Python API for Hisense Televisions
 ##################################
 
-|Build Status| |Black| |PyPi Version| |docs|
-
-A work-in-progress python API for Hisense televisions based off of `mqtt-hisensetv`_.
-
-Installation
-************
-
-Linux
-=====
-.. code:: bash
-
-    sudo -H python3.8 -m pip install hisensetv
-
-Windows
-=======
-.. code:: bash
-
-    py -3.8 -m pip install hisensetv
+A fork built to support the [Homebridge-Hisense-TV plugin](https://github.com/MrAsterisco/homebridge-hisense-tv).
 
 CLI Usage
 *********
