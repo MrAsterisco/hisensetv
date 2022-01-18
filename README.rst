@@ -55,34 +55,6 @@ Gets
         "volume_value": 1
     }
 
-
-No SSL
-======
-Some models do not have self-signed certificates and will fail to connect
-without ``--no-ssl``.
-
-Please open an issue if yours is not listed here!
-
-    * H43A6250UK
-
-Limitations
-***********
-
-Concurrency
-===========
-* Multiple instances of this class will conflict with one-another.
-* Not thread-safe.
-* This API really *should* be asyncio in 2020, but asyncio is not yet part of the paho mqtt library (see `455`_).
-
-Reliability
-===========
-* The concurrency issues contribute to reliability issues in general.
-* Unit tests do not exist yet.
-
-Security
-========
-* The self-signed certificates from the TV are completely bypassed.
-
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 .. |Build Status| image:: https://api.travis-ci.com/newAM/hisensetv.svg?branch=master
