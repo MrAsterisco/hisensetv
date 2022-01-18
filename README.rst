@@ -9,12 +9,15 @@ CLI Usage
 
     usage: hisensetv [-h] [--authorize] [--get {sources,volume}]
                      [--key {back,down,exit,left,menu,power,right,up}] [--no-ssl] [-v]
-                     hostname
+                     hostname --ifname <name>
 
     Hisense TV control.
 
     positional arguments:
       hostname              Hostname or IP for the TV.
+      
+    required arguments:
+      --ifname              Name of the network interface to use to connect to the TV (eg. eth0)
 
     optional arguments:
       -h, --help            show this help message and exit
