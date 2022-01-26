@@ -8,15 +8,15 @@ with open(os.path.join(this_dir, "README.rst"), "r") as f:
 
 setup(
     name="hisensetv",
-    description="MQTT interface to Hisense televisions.",
+    description="MQTT interface to HiSense televisions.",
     long_description=long_description,
-    version="0.2.0",
-    author="Alex M.",
-    author_email="7845120+newAM@users.noreply.github.com",
-    url="https://github.com/newAM/hisensetv",
+    version="1.0.0",
+    author="Alessio Moiso",
+    author_email="a.moiso@outlook.com",
+    url="https://github.com/MrAsterisco/hisensetv",
     license="MIT",
     python_requires=">=3.6",
-    install_requires=["paho-mqtt>=1.5.0"],
+    install_requires=["paho-mqtt>=1.5.0", "netifaces>=0.11.0"],
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",

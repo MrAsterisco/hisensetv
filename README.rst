@@ -1,7 +1,15 @@
 Python API for Hisense Televisions
 ##################################
 
-A fork built to support the `Homebridge-Hisense-TV`_.
+A MQTT service to interact with HiSense TVs.
+
+This fork provides support for the `Homebridge-Hisense-TV`_ and it is not available as separate distribution.
+
+Dependencies
+*********
+- Python 3.6 or later.
+- paho-mqtt 1.5.0 or higher.
+- netifaces 0.11.0 or higher.
 
 CLI Usage
 *********
@@ -22,7 +30,7 @@ CLI Usage
     optional arguments:
       -h, --help            show this help message and exit
       --authorize           Authorize this API to access the TV.
-      --get {sources,volume}
+      --get {sources,volume,state}
                             Gets a value from the TV.
       --key {back,down,exit,left,menu,power,right,up}
                             Sends a keypress to the TV.
