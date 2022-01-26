@@ -15,26 +15,32 @@ CLI Usage
 *********
 ::
 
-    usage: hisensetv [-h] [--authorize] [--get {sources,volume}]
-                     [--key {back,down,exit,left,menu,power,right,up}] [--no-ssl] [-v]
-                     hostname --ifname <name>
+    usage: hisensetv.py [-h] [--authorize] [--ifname IFNAME]
+                    [--get {sources,volume,state}]
+                    [--key {power,up,down,left,right,menu,back,exit,ok,volume_up,volume_down,channel_up,channel_down,fast_forward,rewind,stop,play,pause,mute,home,subtitle,netflix,youtube,amazon,0,1,2,3,4,5,6,7,8,9,source_0,source_1,source_2,source_3,source_4,source_5,source_6,source_7}]
+                    [--no-ssl] [--certfile CERTFILE] [--keyfile KEYFILE] [-v]
+                    hostname
 
     Hisense TV control.
 
     positional arguments:
-      hostname              Hostname or IP for the TV.
-      
-    required arguments:
-      --ifname              Name of the network interface to use to connect to the TV (eg. eth0)
+        hostname              Hostname or IP for the TV.
 
     optional arguments:
       -h, --help            show this help message and exit
       --authorize           Authorize this API to access the TV.
+      --ifname IFNAME       Name of the network interface to use
       --get {sources,volume,state}
                             Gets a value from the TV.
-      --key {back,down,exit,left,menu,power,right,up}
+      --key {power,up,down,left,right,menu,back,exit,ok,volume_up,volume_down,channel_up,channel_down,fast_forward,rewind,stop,play,pause,mute,home,subtitle,netflix,youtube,amazon,0,1,2,3,4,5,6,7,8,9,source_0,source_1,source_2,source_3,source_4,source_5,source_6,source_7}
                             Sends a keypress to the TV.
       --no-ssl              Do not connect with SSL (required for some models).
+      --certfile CERTFILE   Absolute path to the .cer file (required for some
+                            models). Works only when --keyfile is also specified.
+                            Will be ignored if --no-ssl is specified.
+      --keyfile KEYFILE     Absolute path to the .pkcs8 file (required for some
+                            models). Works only when --certfile is also specified.
+                            Will be ignored if --no-ssl is specified.
       -v, --verbose         Logging verbosity.
 
 One Time Setup
