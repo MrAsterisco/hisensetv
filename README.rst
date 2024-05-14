@@ -5,14 +5,12 @@ A MQTT service to interact with HiSense TVs.
 
 This fork provides support for the `Homebridge-Hisense-TV`_ and it is not available as separate distribution.
 
-Dependencies
-*********
-- Python 3.6 or later.
+## Dependencies
+- Python 3.8 or later.
 - paho-mqtt 1.5.0 or higher.
 - netifaces 0.11.0 or higher.
 
-CLI Usage
-*********
+## CLI Usage
 ::
 
     usage: hisensetv.py [-h] [--authorize] [--ifname IFNAME]
