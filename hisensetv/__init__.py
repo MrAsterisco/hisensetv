@@ -16,6 +16,8 @@ from typing import Union
 
 import netifaces
 import paho.mqtt.client as mqtt
+from paho.mqtt.enums import CallbackAPIVersion
+from paho.mqtt.reasoncodes import ReasonCode
 
 
 class HisenseTvError(Exception):
@@ -121,7 +123,7 @@ class HisenseTv:
         self._queue = {self._BROADCAST_TOPIC: queue.Queue(), self._our_topic: queue.Queue()}
 
     def __enter__(self):
-        self._mqtt_client = mqtt.Client(self.client_id)
+        self._mqtt_client = mqtt.Client(CallbackAPIVersion.VERSION2, self.client_id)
         self._mqtt_client.username_pw_set(
             username=self.username, password=self.password
         )
@@ -161,7 +163,8 @@ class HisenseTv:
             client: mqtt.Client,
             userdata: Optional[Any],
             flags: Dict[str, int],
-            rc: int,
+            rc: ReasonCode,
+            properties: mqtt.Properties,
     ):
         """ Callback upon MQTT broker connection. """
         self.logger.debug(f"subscribing to {self._our_topic} and {self._BROADCAST_TOPIC}")
